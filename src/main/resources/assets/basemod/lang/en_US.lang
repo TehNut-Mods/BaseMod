@@ -1,0 +1,7 @@
+#CREATIVE TAB
+itemGroup.basemod.creativeTab=Base Mod
+
+#CONFIG GUI
+info.basemod.config.title=Base Mod Configuration
+info.basemod.config.section.example=Example Section
+info.basemod.config.section.example.tooltip=Example Section Tooltip
