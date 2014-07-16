@@ -32,10 +32,10 @@ public class BaseMod {
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
+		logger.info("Begin Pre-initialization");
+
 		config = new Configuration(event.getSuggestedConfigurationFile());
 		ConfigHandler.init(config);
-
-		logger.info("Begin Pre-initialization");
 
 		OreDictHandler.registerOreDict();
 

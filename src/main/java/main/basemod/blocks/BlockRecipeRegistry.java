@@ -7,6 +7,7 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 
 public class BlockRecipeRegistry {
 
+	//Self explanatory. Continue these how you wish. EG: registerPulverizerRecipes
 	private static void registerShapedRecipes() {
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.gold_ore), new Object[]{"XXX", "X X", "XXX", 'X', "ingotGold"}));
 	}

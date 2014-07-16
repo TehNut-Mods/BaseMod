@@ -6,6 +6,7 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public class OreDictHandler {
 
+	//Oredict entries
 	public static String powderBlaze = "powderBlaze";
 
 	public static void registerOreDict() {
