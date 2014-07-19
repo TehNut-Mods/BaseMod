@@ -5,6 +5,8 @@ itemGroup.basemod.creativeTab=Base Mod
 info.basemod.config.title=Base Mod Configuration
 info.basemod.config.section.example=Example Section
 info.basemod.config.section.example.tooltip=Example Section Tooltip
+info.basemod.config.section.generation=Generation
+info.basemod.config.section.generation.tooltip=World generation settings
 
 #BLOCKS
 tile.basemod.quisque.lapis.block.name=Lapis Quisque Block
