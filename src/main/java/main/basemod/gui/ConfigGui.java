@@ -26,9 +26,11 @@ public class ConfigGui extends GuiConfig {
 
 	private static List<IConfigElement> getConfigElements() {
 		sections.put(ExampleEntry.class, ConfigHandler.exampleSection);
+		sections.put(GenerationEntry.class, ConfigHandler.generation);
 
 		List<IConfigElement> list = new ArrayList<IConfigElement>();
 		list.add(new DummyConfigElement.DummyCategoryElement(sections.get(ExampleEntry.class), "info.basemod.config.section.example", ExampleEntry.class));
+		list.add(new DummyConfigElement.DummyCategoryElement(sections.get(GenerationEntry.class), "info.basemod.config.section.generation", GenerationEntry.class));
 
 		return list;
 	}
@@ -49,6 +51,13 @@ public class ConfigGui extends GuiConfig {
 	public static class ExampleEntry extends BaseModEntry {
 
 		public ExampleEntry(GuiConfig owningScreen, GuiConfigEntries owningEntryList, IConfigElement configElement) {
+			super(owningScreen, owningEntryList, configElement);
+		}
+	}
+
+	public static class GenerationEntry extends BaseModEntry {
+
+		public GenerationEntry(GuiConfig owningScreen, GuiConfigEntries owningEntryList, IConfigElement configElement) {
 			super(owningScreen, owningEntryList, configElement);
 		}
 	}

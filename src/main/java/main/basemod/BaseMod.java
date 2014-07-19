@@ -5,12 +5,14 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 import main.basemod.blocks.BlockRecipeRegistry;
 import main.basemod.blocks.BlockRegistry;
 import main.basemod.gui.CreativeTabBaseMod;
 import main.basemod.items.ItemRecipeRegistry;
 import main.basemod.items.ItemRegistry;
 import main.basemod.proxies.CommonProxy;
+import main.basemod.util.GenerationHandler;
 import main.basemod.util.OreDictHandler;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.config.Configuration;
@@ -37,10 +39,12 @@ public class BaseMod {
 		config = new Configuration(event.getSuggestedConfigurationFile());
 		ConfigHandler.init(config);
 
-		OreDictHandler.registerOreDict();
-
 		ItemRegistry.registerAllItems();
 		BlockRegistry.registerAllBlocks();
+
+		OreDictHandler.registerOreDict();
+
+		GameRegistry.registerWorldGenerator(new GenerationHandler(), 2);
 	}
 
 	@Mod.EventHandler
