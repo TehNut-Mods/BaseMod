@@ -1,5 +1,7 @@
 package main.basemod.util;
 
+//General place to call text formatting from. You can alternatively use 'EnumChatFormatting'.
+
 import net.minecraft.util.StatCollector;
 
 public class TextHelper {

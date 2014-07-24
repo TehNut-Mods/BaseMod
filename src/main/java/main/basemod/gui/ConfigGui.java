@@ -1,6 +1,8 @@
 package main.basemod.gui;
 
-import cpw.mods.fml.client.config.DummyConfigElement;
+//Creates a config GUI for your mod. This requires a working mcmod.info file to work. These are dummy sections that don't do anything.
+
+import cpw.mods.fml.client.config.DummyConfigElement.DummyCategoryElement;
 import cpw.mods.fml.client.config.GuiConfig;
 import cpw.mods.fml.client.config.GuiConfigEntries;
 import cpw.mods.fml.client.config.IConfigElement;
@@ -29,8 +31,9 @@ public class ConfigGui extends GuiConfig {
 		sections.put(GenerationEntry.class, ConfigHandler.generation);
 
 		List<IConfigElement> list = new ArrayList<IConfigElement>();
-		list.add(new DummyConfigElement.DummyCategoryElement(sections.get(ExampleEntry.class), "info.basemod.config.section.example", ExampleEntry.class));
-		list.add(new DummyConfigElement.DummyCategoryElement(sections.get(GenerationEntry.class), "info.basemod.config.section.generation", GenerationEntry.class));
+		list.add(new DummyCategoryElement(sections.get(ExampleEntry.class), "info.basemod.config.section.example", ExampleEntry.class));
+		list.add(new DummyCategoryElement(sections.get(GenerationEntry.class), "info.basemod.config.section.generation", GenerationEntry.class));
+
 
 		return list;
 	}

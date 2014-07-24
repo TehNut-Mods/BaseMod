@@ -1,5 +1,7 @@
 package main.basemod.util;
 
+//General place to store keyboard press events.
+
 import org.lwjgl.input.Keyboard;
 
 public class KeyboardHelper {

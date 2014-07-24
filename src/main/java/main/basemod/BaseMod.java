@@ -1,5 +1,8 @@
 package main.basemod;
 
+//Check all the classes for (hopefully) detailed descriptions of what it does. There will also be tidbits of comments throughout the codebase.
+//If you wish to add a description to a class, or extend/change an existing one, submit a PR with your changes.
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;

@@ -1,5 +1,7 @@
 package main.basemod.items;
 
+//General place to register all items.
+
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
 

@@ -1,5 +1,7 @@
 package main.basemod.items;
 
+//General item that does nothing.
+
 import main.basemod.BaseMod;
 import main.basemod.ModInformation;
 import net.minecraft.item.Item;

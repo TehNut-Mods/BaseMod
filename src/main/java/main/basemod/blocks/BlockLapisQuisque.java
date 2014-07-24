@@ -1,5 +1,7 @@
 package main.basemod.blocks;
 
+//General block that doesn't do anything.
+
 import main.basemod.BaseMod;
 import main.basemod.ModInformation;
 import net.minecraft.block.Block;

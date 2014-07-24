@@ -1,6 +1,9 @@
 package main.basemod.items;
 
+//General place to register recipes for items.
+
 import cpw.mods.fml.common.registry.GameRegistry;
+import main.basemod.blocks.BlockRegistry;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.ShapedOreRecipe;
@@ -14,7 +17,7 @@ public class ItemRecipeRegistry {
 	}
 
 	private static void registerShaplessRecipes() {
-
+		GameRegistry.addShapelessRecipe(new ItemStack(BlockRegistry.quisqueLapisBlock), new ItemStack(ItemRegistry.quisqueLapis, 9));
 	}
 
 	public static void registerItemRecipes() {

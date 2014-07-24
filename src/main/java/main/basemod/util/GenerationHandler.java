@@ -1,5 +1,7 @@
 package main.basemod.util;
 
+//This class handles all generation the mod contains.
+
 import cpw.mods.fml.common.IWorldGenerator;
 import main.basemod.ConfigHandler;
 import main.basemod.blocks.BlockRegistry;
@@ -11,6 +13,7 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
 import java.util.Random;
 
 public class GenerationHandler implements IWorldGenerator {
+	//Which dimension to generate in by dimension ID (Nether -1, Overworld 0, End 1, etc)
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
 		switch (world.provider.dimensionId) {
@@ -24,6 +27,7 @@ public class GenerationHandler implements IWorldGenerator {
 		}
 	}
 
+	//The actual generation method.
 	private void generateSurface(World world, Random rand, int chunkX, int chunkZ) {
 		for (int k = 0; k < 10; k++) {
 			int firstBlockXCoord = chunkX + rand.nextInt(16);
