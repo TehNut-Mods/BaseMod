@@ -12,7 +12,7 @@ My hope is that it is simple to understand and easy to use.
 2. Setup your Gradle workspace. I suggest following [this](https://www.youtube.com/watch?v=8VEdtQLuLO0) tutorial by LexManos. I also suggest running "setupDecompWorkspace" instead of "setupDevWorkspace". Look in gradlew for what everything does.
 3. Open it up in your IDE and refactor everything. 
 
-      EG: BaseMod.java -> YourModName.java
+       EG: BaseMod.java -> YourModName.java
       
 4. Write the content of your mod.
 5. Release to your loving fans and hope you didn't screw anything up.
@@ -46,3 +46,13 @@ I *do not* require any credit for this. I wrote it primarily for myself to use i
    Occasionally, I help out [Tombenpotter](https://github.com/Tombenpotter) with Electro-Magic Tools. (Mostly just localizations)
 
    I am also the newest TPPI dev.
+   
+##Additional Tips:
+   
+* __How to update the Forge version-__
+	
+	View [this](http://www.minecraftforge.net/forum/index.php?topic=14048.0#post_update_forge) forum post for information on that.
+	
+* __How to update the ForgeGradle version-__
+	
+	View [this](http://www.minecraftforge.net/forum/index.php?topic=14048.0#post_update_forgegradle) forum post for information on that.
