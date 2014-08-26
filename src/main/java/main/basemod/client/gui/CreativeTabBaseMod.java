@@ -1,4 +1,4 @@
-package main.basemod.gui;
+package main.basemod.client.gui;
 
 //Creates your creative tab.
 

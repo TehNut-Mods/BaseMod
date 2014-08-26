@@ -1,4 +1,4 @@
-package main.basemod.gui;
+package main.basemod.client.gui;
 
 import cpw.mods.fml.common.network.IGuiHandler;
 import main.basemod.BaseMod;

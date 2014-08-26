@@ -1,4 +1,4 @@
-package main.basemod.gui;
+package main.basemod.client.gui;
 
 //Creates a config GUI for your mod. This requires a working mcmod.info file to work. These are dummy sections that don't do anything.
 
