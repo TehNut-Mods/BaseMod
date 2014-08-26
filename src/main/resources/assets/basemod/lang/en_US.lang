@@ -14,3 +14,31 @@ tile.basemod.quisque.lapis.ore.name=Lapis Quisque Ore
 
 #ITEMS
 item.basemod.quisque.lapis.name=Lapis Quisque
+item.basemod.book.base.name=Base Book
+
+#BASEBOOK
+#TITLES
+gui.basemod.basebook.title.main=Base Book
+gui.basemod.basebook.title.1=Info 1
+gui.basemod.basebook.title.2=Info 2
+gui.basemod.basebook.title.3=Info 3
+gui.basemod.basebook.title.4=Info 4
+gui.basemod.basebook.title.5=Info 5
+gui.basemod.basebook.title.6=Info 6
+gui.basemod.basebook.title.7=Info 7
+gui.basemod.basebook.title.8=Info 8
+gui.basemod.basebook.title.9=Info 9
+gui.basemod.basebook.title.10=Info 10
+
+#CONTENT
+gui.basemod.basebook.content.main=The book of filler text.
+gui.basemod.basebook.content.1=Leela, Bender, we're going grave robbing. Say what? Hey, guess what you're accessories to. Perhaps, but perhaps your civilization is merely the sewer of an even greater society above you! Why did you bring us here?
+gui.basemod.basebook.content.2=Have you ever tried just turning off the TV, sitting down with your children, and hitting them? We're also Santa Claus! Wow! A superpowers drug you can just rub onto your skin? You'd think it would be something you'd have to freebase. So I really am important? How I feel when I'm drunk is correct? Kif might! We're also Santa Claus!
+gui.basemod.basebook.content.3=Are you crazy? I can't swallow that. Pansy. Okay, I like a challenge. This opera's as lousy as it is brilliant! Your lyrics lack subtlety. You can't just have your characters announce how they feel. That makes me feel angry! I am Singing Wind, Chief of the Martians.
+gui.basemod.basebook.content.4=Oh, all right, I am. But if anything happens to me, tell them I died robbing some old man. How much did you make me? And yet you haven't said what I told you to say! How can any of us trust you? THE BIG BRAIN AM WINNING AGAIN! I AM THE GREETEST! NOW I AM LEAVING EARTH, FOR NO RAISEN! Who said that? SURE you can die! You want to die?!
+gui.basemod.basebook.content.5=So, how 'bout them Knicks? You can crush me but you can't crush my spirit! It must be wonderful. You, minion. Lift my arm. AFTER HIM!
+gui.basemod.basebook.content.6=Shut up and take my money! Who said that? SURE you can die! You want to die?! With gusto. THE BIG BRAIN AM WINNING AGAIN! I AM THE GREETEST! NOW I AM LEAVING EARTH, FOR NO RAISEN!
+gui.basemod.basebook.content.7=Now, look here, my good man. We found them. Ah, now we see the violence inherent in the system! A newt? On second thoughts, let's not go there. It is a silly place. Where'd you get the coconuts?
+gui.basemod.basebook.content.8=Bloody Peasant! How do you know she is a witch? Well, I got better. We want a shrubbery!! Where'd you get the coconuts?
+gui.basemod.basebook.content.9=The swallow may fly south with the sun, and the house martin or the plover may seek warmer climes in winter, yet these are not strangers to our land. And this isn't my nose. This is a false one. Well, I didn't vote for you.
+gui.basemod.basebook.content.10=Well, she turned me into a newt. Bring her forward! Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods. Well, Mercia's a temperate zone!

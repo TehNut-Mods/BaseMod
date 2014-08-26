@@ -4,11 +4,14 @@
 /out/*
 /asm/*
 /bin/*
+/run/*
+/libs/*
+Thumbs.db
 *.psd
 *.iml
 *.ipr
 *.iws
 *.psd
-
+*.psd
 *.classpath
 *.project

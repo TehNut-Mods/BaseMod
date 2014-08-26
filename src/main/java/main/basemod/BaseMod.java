@@ -8,10 +8,12 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import main.basemod.blocks.BlockRecipeRegistry;
 import main.basemod.blocks.BlockRegistry;
 import main.basemod.gui.CreativeTabBaseMod;
+import main.basemod.gui.GuiHandler;
 import main.basemod.items.ItemRecipeRegistry;
 import main.basemod.items.ItemRegistry;
 import main.basemod.proxies.CommonProxy;
@@ -47,6 +49,7 @@ public class BaseMod {
 
 		OreDictHandler.registerOreDict();
 
+		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
 		GameRegistry.registerWorldGenerator(new GenerationHandler(), 2);
 	}
 
