@@ -15,6 +15,13 @@ tile.basemod.quisque.lapis.ore.name=Lapis Quisque Ore
 #ITEMS
 item.basemod.quisque.lapis.name=Lapis Quisque
 item.basemod.book.base.name=Base Book
+item.basemod.book.yolo.name=Book of Yolo
+
+#TOOLTIPS
+info.basemod.tooltip.fire=This book will set you on fire.
+
+#CHAT
+info.basemod.chat.sneak=Sneak to set yourself ablaze.
 
 #BASEBOOK
 #TITLES

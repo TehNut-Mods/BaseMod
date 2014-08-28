@@ -18,6 +18,7 @@ public class ConfigHandler {
 		config.load();
 
 		//Example category comment.
+		config.addCustomCategoryComment(exampleSection, "Example section comment");
 		config.addCustomCategoryComment(generation, "This section contains all settings regarding ore generation.");
 
 		exampleOption = config.get(exampleSection, "exampleOption", true, "Description of option goes here.").getBoolean(exampleOption);

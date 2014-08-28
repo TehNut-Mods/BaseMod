@@ -3,6 +3,7 @@ package main.basemod.items;
 //General place to register all items.
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import main.basemod.ModInformation;
 import net.minecraft.item.Item;
 
 public class ItemRegistry {
@@ -16,7 +17,7 @@ public class ItemRegistry {
 		quisqueLapis = new ItemLapisQuisque();
 		GameRegistry.registerItem(quisqueLapis, "ItemLapisQuisque");
 
-		baseBook = new ItemBaseBook();
+		baseBook = new ItemBaseBook().setUnlocalizedName(ModInformation.ID);
 		GameRegistry.registerItem(baseBook, "ItemBaseBook");
 	}
 
