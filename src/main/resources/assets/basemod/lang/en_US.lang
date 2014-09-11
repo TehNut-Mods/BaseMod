@@ -52,3 +52,6 @@ gui.basemod.basebook.content.10=Well, she turned me into a newt. Bring her forwa
 
 #CONSOLE LOG
 info.basemod.console.config.refresh=Refreshing configuration file.
+
+#CONFIG
+basemod.config.title=BaseMod Configuration

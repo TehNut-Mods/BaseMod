@@ -11,7 +11,7 @@ public class EventHandler {
 	@SubscribeEvent
 	public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent eventArgs) {
 		if (eventArgs.modID.equals(ModInformation.ID)) {
-			ConfigHandler.init();
+			ConfigHandler.syncConfig();
 			BaseMod.logger.info(TextHelper.localize("info.basemod.console.config.refresh"));
 		}
 	}
