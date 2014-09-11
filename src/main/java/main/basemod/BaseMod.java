@@ -17,9 +17,11 @@ import main.basemod.client.gui.GuiHandler;
 import main.basemod.items.ItemRecipeRegistry;
 import main.basemod.items.ItemRegistry;
 import main.basemod.proxies.CommonProxy;
+import main.basemod.util.EventHandler;
 import main.basemod.util.GenerationHandler;
 import main.basemod.util.OreDictHandler;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -35,21 +37,21 @@ public class BaseMod {
 
 	@Mod.Instance
 	public static BaseMod instance;
-	public static Configuration config;
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		logger.info("Begin Pre-initialization");
 
-		config = new Configuration(event.getSuggestedConfigurationFile());
-		ConfigHandler.init(config);
+		ConfigHandler.config = new Configuration(event.getSuggestedConfigurationFile());
+		ConfigHandler.init();
 
 		ItemRegistry.registerAllItems();
 		BlockRegistry.registerAllBlocks();
 
 		OreDictHandler.registerOreDict();
-
+		MinecraftForge.EVENT_BUS.register(new EventHandler());
 		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
+
 		GameRegistry.registerWorldGenerator(new GenerationHandler(), 2);
 	}
 

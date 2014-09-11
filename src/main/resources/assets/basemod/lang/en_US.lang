@@ -49,3 +49,6 @@ gui.basemod.basebook.content.7=Now, look here, my good man. We found them. Ah, n
 gui.basemod.basebook.content.8=Bloody Peasant! How do you know she is a witch? Well, I got better. We want a shrubbery!! Where'd you get the coconuts?
 gui.basemod.basebook.content.9=The swallow may fly south with the sun, and the house martin or the plover may seek warmer climes in winter, yet these are not strangers to our land. And this isn't my nose. This is a false one. Well, I didn't vote for you.
 gui.basemod.basebook.content.10=Well, she turned me into a newt. Bring her forward! Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods. Well, Mercia's a temperate zone!
+
+#CONSOLE LOG
+info.basemod.console.config.refresh=Refreshing configuration file.
