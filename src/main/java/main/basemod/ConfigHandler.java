@@ -21,13 +21,12 @@ public class ConfigHandler
     public static void init(File file)
     {
         config = new Configuration(file);
+
         syncConfig();
     }
 
     public static void syncConfig()
     {
-        config.load();
-
         // Example category comment.
         config.addCustomCategoryComment(exampleSection, "Example section comment");
         config.addCustomCategoryComment(generation, "This section contains all settings regarding ore generation.");
@@ -35,9 +34,6 @@ public class ConfigHandler
         exampleOption = config.get(exampleSection, "exampleOption", true, "Description of option goes here.").getBoolean(exampleOption);
         enableGeneration = config.get(generation, "enableGeneration", true, "Enable Lapis Quisque generation").getBoolean(enableGeneration);
 
-        if (config.hasChanged())
-        {
-            config.save();
-        }
+        config.save();
     }
 }

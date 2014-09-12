@@ -19,6 +19,7 @@ import net.minecraftforge.common.MinecraftForge;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -49,7 +50,7 @@ public class BaseMod {
 		BlockRegistry.registerAllBlocks();
 
 		OreDictHandler.registerOreDict();
-		MinecraftForge.EVENT_BUS.register(new EventHandler());
+		FMLCommonHandler.instance().bus().register(new EventHandler());
 		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
 
 		GameRegistry.registerWorldGenerator(new GenerationHandler(), 2);
