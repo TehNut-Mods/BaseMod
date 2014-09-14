@@ -24,5 +24,4 @@ public class ItemRecipeRegistry {
 		registerShapedRecipes();
 		registerShaplessRecipes();
 	}
-
 }

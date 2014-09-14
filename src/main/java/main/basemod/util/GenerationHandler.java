@@ -13,6 +13,7 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
 import java.util.Random;
 
 public class GenerationHandler implements IWorldGenerator {
+
 	//Which dimension to generate in by dimension ID (Nether -1, Overworld 0, End 1, etc)
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
@@ -34,7 +35,7 @@ public class GenerationHandler implements IWorldGenerator {
 			int firstBlockZCoord = chunkZ + rand.nextInt(16);
 			int quisqueY = rand.nextInt(20);
 
-			if(ConfigHandler.enableGeneration)
+			if (ConfigHandler.enableGeneration)
 				(new WorldGenMinable(BlockRegistry.quisqueLapisOre, 0, 4, Blocks.stone)).generate(world, rand, firstBlockXCoord, quisqueY, firstBlockZCoord);
 		}
 	}

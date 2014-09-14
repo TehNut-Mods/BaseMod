@@ -20,6 +20,7 @@ public class CreativeTabBaseMod extends CreativeTabs {
 	}
 
 	@Override
-	public Item getTabIconItem() { return new Item();
+	public Item getTabIconItem() {
+		return new Item();
 	}
 }

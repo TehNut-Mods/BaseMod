@@ -28,5 +28,4 @@ public class BlockRegistry {
 		registerBlockSet1();
 		registerBlockSet2();
 	}
-
 }

@@ -17,7 +17,8 @@ import java.util.List;
 import static org.lwjgl.opengl.GL11.glColor4f;
 
 @SideOnly(Side.CLIENT)
-public class ItemGuiBaseBook extends GuiScreen{
+public class ItemGuiBaseBook extends GuiScreen {
+
 	static ResourceLocation gui = new ResourceLocation(ModInformation.ID, "textures/guis/bookBase.png");
 
 	private static final int BOOK_BTN_NEXT = 0;
@@ -99,17 +100,39 @@ public class ItemGuiBaseBook extends GuiScreen{
 
 	public void drawForeground() {
 		switch (pageIndex) {
-			case 0: drawMainScreen(); break;
-			case 1: drawScreenTwo(); break;
-			case 2: drawScreenThree(); break;
-			case 3: drawScreenFour(); break;
-			case 4: drawScreenFive(); break;
-			case 5: drawScreenSix(); break;
-			case 6: drawScreenSeven(); break;
-			case 7: drawScreenEight(); break;
-			case 8: drawScreenNine(); break;
-			case 9: drawScreenTen(); break;
-			case 10: drawScreenEleven(); break;
+			case 0:
+				drawMainScreen();
+				break;
+			case 1:
+				drawScreenTwo();
+				break;
+			case 2:
+				drawScreenThree();
+				break;
+			case 3:
+				drawScreenFour();
+				break;
+			case 4:
+				drawScreenFive();
+				break;
+			case 5:
+				drawScreenSix();
+				break;
+			case 6:
+				drawScreenSeven();
+				break;
+			case 7:
+				drawScreenEight();
+				break;
+			case 8:
+				drawScreenNine();
+				break;
+			case 9:
+				drawScreenTen();
+				break;
+			case 10:
+				drawScreenEleven();
+				break;
 		}
 	}
 
@@ -118,7 +141,7 @@ public class ItemGuiBaseBook extends GuiScreen{
 
 		boolean unicode = fontRendererObj.getUnicodeFlag();
 		fontRendererObj.setUnicodeFlag(false);
-		fontRendererObj.drawSplitString(TextHelper.localize("gui.basemod.basebook.content.main"), bookXStart + 30, 60, WIDTH-40, 0x000000);
+		fontRendererObj.drawSplitString(TextHelper.localize("gui.basemod.basebook.content.main"), bookXStart + 30, 60, WIDTH - 40, 0x000000);
 		fontRendererObj.drawString((pageIndex + 1) + "/" + (bookTotalPages), bookXStart + 82, 215, 0x000000);
 		fontRendererObj.setUnicodeFlag(unicode);
 	}
@@ -148,7 +171,7 @@ public class ItemGuiBaseBook extends GuiScreen{
 
 		boolean unicode = fontRendererObj.getUnicodeFlag();
 		fontRendererObj.setUnicodeFlag(false);
-		fontRendererObj.drawSplitString(TextHelper.localize("gui.basemod.basebook.content.3"), bookXStart + 20, 60, WIDTH-40, 0x000000);
+		fontRendererObj.drawSplitString(TextHelper.localize("gui.basemod.basebook.content.3"), bookXStart + 20, 60, WIDTH - 40, 0x000000);
 		fontRendererObj.drawString((pageIndex + 1) + "/" + (bookTotalPages), bookXStart + 82, 215, 0x000000);
 		fontRendererObj.setUnicodeFlag(unicode);
 	}
@@ -224,6 +247,7 @@ public class ItemGuiBaseBook extends GuiScreen{
 	}
 
 	public class GuiButtonPageChange extends GuiButton {
+
 		private final boolean previous;
 
 		public GuiButtonPageChange(int id, int x, int y, boolean previous) {

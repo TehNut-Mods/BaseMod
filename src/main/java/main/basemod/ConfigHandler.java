@@ -2,38 +2,36 @@ package main.basemod;
 
 // Creation and usage of the config. Most if it is self explanatory.
 
-import java.io.File;
-
 import net.minecraftforge.common.config.Configuration;
 
-public class ConfigHandler
-{
-    public static Configuration config;
+import java.io.File;
 
-    // sections to add to the config
-    public static String exampleSection = "Example Section";
-    public static String generation = "Generation";
+public class ConfigHandler {
 
-    // options in the config
-    public static boolean exampleOption;
-    public static boolean enableGeneration;
+	public static Configuration config;
 
-    public static void init(File file)
-    {
-        config = new Configuration(file);
+	// sections to add to the config
+	public static String exampleSection = "Example Section";
+	public static String generation = "Generation";
 
-        syncConfig();
-    }
+	// options in the config
+	public static boolean exampleOption;
+	public static boolean enableGeneration;
 
-    public static void syncConfig()
-    {
-        // Example category comment.
-        config.addCustomCategoryComment(exampleSection, "Example section comment");
-        config.addCustomCategoryComment(generation, "This section contains all settings regarding ore generation.");
+	public static void init(File file) {
+		config = new Configuration(file);
 
-        exampleOption = config.get(exampleSection, "exampleOption", true, "Description of option goes here.").getBoolean(exampleOption);
-        enableGeneration = config.get(generation, "enableGeneration", true, "Enable Lapis Quisque generation").getBoolean(enableGeneration);
+		syncConfig();
+	}
 
-        config.save();
-    }
+	public static void syncConfig() {
+		// Example category comment.
+		config.addCustomCategoryComment(exampleSection, "Example section comment");
+		config.addCustomCategoryComment(generation, "This section contains all settings regarding ore generation.");
+
+		exampleOption = config.get(exampleSection, "exampleOption", true, "Description of option goes here.").getBoolean(exampleOption);
+		enableGeneration = config.get(generation, "enableGeneration", true, "Enable Lapis Quisque generation").getBoolean(enableGeneration);
+
+		config.save();
+	}
 }

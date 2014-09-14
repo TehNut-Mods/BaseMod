@@ -15,11 +15,10 @@ public class GuiHandler implements IGuiHandler {
 
 	@Override
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-	if (ID == 0) {
+		if (ID == 0) {
 			BaseMod.logger.info("Open Gui");
 			return new ItemGuiBaseBook();
 		}
 		return null;
 	}
-
 }

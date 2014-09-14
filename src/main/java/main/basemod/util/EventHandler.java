@@ -15,5 +15,4 @@ public class EventHandler {
 			BaseMod.logger.info(TextHelper.localize("info.basemod.console.config.refresh"));
 		}
 	}
-
 }

@@ -68,14 +68,14 @@ public class ItemBaseBook extends Item {
 	public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player) {
 		switch (itemStack.getItemDamage()) {
 			case 0: {
-				player.openGui(BaseMod.instance, 0, world, (int)player.posX, (int)player.posY, (int)player.posZ);
+				player.openGui(BaseMod.instance, 0, world, (int) player.posX, (int) player.posY, (int) player.posZ);
 				return itemStack;
 			}
 			case 1: {
-				if(player.isSneaking() && !player.capabilities.isCreativeMode) {
+				if (player.isSneaking() && !player.capabilities.isCreativeMode) {
 					player.swingItem();
 					player.setFire(3);
-				} else if(!player.isSneaking() && !player.worldObj.isRemote) {
+				} else if (!player.isSneaking() && !player.worldObj.isRemote) {
 					player.addChatMessage(new ChatComponentTranslation("info.basemod.chat.sneak"));
 				}
 			}
@@ -86,7 +86,7 @@ public class ItemBaseBook extends Item {
 	@SuppressWarnings("unchecked")
 	@Override
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
-		if(itemStack.getItemDamage() == 1) {
+		if (itemStack.getItemDamage() == 1) {
 			list.add(TextHelper.RED + TextHelper.localize("info.basemod.tooltip.fire"));
 		}
 	}
