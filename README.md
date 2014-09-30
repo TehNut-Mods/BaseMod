@@ -19,6 +19,10 @@ My hope is that it is simple to understand and easy to use.
 
 I *do not* require any credit for this. I wrote it primarily for myself to use in my own mods and there's literally no reason for it to not be public.
 
+##Suggestions or Feedback?
+
+[Join my channel](https://webchat.esper.net/?channels=tehnut) (#TehNut) on [Espernet](https://www.esper.net/) and discuss there.
+
 ##FAQ:
 
 * __Oh no! I found a bug/leak with it! D:__
