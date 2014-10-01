@@ -1,6 +1,8 @@
 package main.basemod.items;
 
-//General place to register recipes for items.
+/*
+ * General place to do all your item related recipe things'n'stuff.
+ */
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import main.basemod.blocks.BlockRegistry;
@@ -10,7 +12,7 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 
 public class ItemRecipeRegistry {
 
-	//Self explanatory. Continue these how you wish. EG: registerCustomRecipes
+	// Self explanatory. Continue these how you wish. EG: registerSmeltingRecipes
 	private static void registerShapedRecipes() {
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.blaze_rod), new Object[]{"X  ", " X ", "  X", 'X', "powderBlaze"}));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.blaze_rod), new Object[]{"  X", " X ", "X  ", 'X', "powderBlaze"}));

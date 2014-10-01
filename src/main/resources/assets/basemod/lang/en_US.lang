@@ -2,11 +2,7 @@
 itemGroup.basemod.creativeTab=Base Mod
 
 #CONFIG GUI
-info.basemod.config.title=Base Mod Configuration
-info.basemod.config.section.example=Example Section
-info.basemod.config.section.example.tooltip=Example Section Tooltip
-info.basemod.config.section.generation=Generation
-info.basemod.config.section.generation.tooltip=World generation settings
+gui.basemod.config.title=Base Mod Configuration
 
 #BLOCKS
 tile.basemod.quisque.lapis.block.name=Lapis Quisque Block
@@ -52,6 +48,3 @@ gui.basemod.basebook.content.10=Well, she turned me into a newt. Bring her forwa
 
 #CONSOLE LOG
 info.basemod.console.config.refresh=Refreshing configuration file.
-
-#CONFIG
-basemod.config.title=BaseMod Configuration

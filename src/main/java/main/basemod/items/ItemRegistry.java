@@ -1,9 +1,12 @@
 package main.basemod.items;
 
-//General place to register all items.
+/*
+ * Class to register your blocks in.
+ * The order that you list them here is the order they are registered.
+ * Keep that in mind if you like nicely organized creative tabs.
+ */
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import main.basemod.ModInformation;
 import net.minecraft.item.Item;
 
 public class ItemRegistry {
@@ -12,12 +15,14 @@ public class ItemRegistry {
 	public static Item quisqueLapis;
 	public static Item baseBook;
 
+	// I use multiple sections here to sort things. It's just my system, you don't have to.
+	// Just delete "registerItemSet2" and "registerAllItems" then make this public. Make sure to change the call in the main class.
+
 	private static void registerItemSet1() {
-		//I use multiple sections here to sort things. It's just my system, you don't have to. Just delete "registerItemSet2" and "registerAllItems" then make this public. Make sure to change the call in the main class.
 		quisqueLapis = new ItemLapisQuisque();
 		GameRegistry.registerItem(quisqueLapis, "ItemLapisQuisque");
 
-		baseBook = new ItemBaseBook().setUnlocalizedName(ModInformation.ID);
+		baseBook = new ItemBaseBook();
 		GameRegistry.registerItem(baseBook, "ItemBaseBook");
 	}
 

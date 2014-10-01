@@ -1,16 +1,12 @@
 package main.basemod.items;
 
-//General item that does nothing.
+/*
+ * The most simple item you can make. It literally does nothing but set a texture and name.
+ */
 
-import main.basemod.BaseMod;
-import main.basemod.ModInformation;
-import net.minecraft.item.Item;
-
-public class ItemLapisQuisque extends Item {
+public class ItemLapisQuisque extends ItemBase {
 
 	public ItemLapisQuisque() {
-		this.setCreativeTab(BaseMod.tabBaseMod);
-		this.setUnlocalizedName(ModInformation.ID + ".quisque.lapis");
-		this.setTextureName(ModInformation.ID + ":quisqueLapis");
+		super("quisque.lapis", "quisqueLapis");
 	}
 }

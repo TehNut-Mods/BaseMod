@@ -1,6 +1,8 @@
 package main.basemod.blocks;
 
-//General place to store all your recipes for blocks.
+/*
+ * General place to do all your block related recipe things'n'stuff.
+ */
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;

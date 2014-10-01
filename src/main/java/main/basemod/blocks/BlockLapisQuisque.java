@@ -1,20 +1,14 @@
 package main.basemod.blocks;
 
-//General block that doesn't do anything.
+/*
+ * General block that doesn't do anything.
+ */
 
-import main.basemod.BaseMod;
-import main.basemod.ModInformation;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-public class BlockLapisQuisque extends Block {
+public class BlockLapisQuisque extends BlockBase {
 
 	public BlockLapisQuisque() {
-		super(Material.rock);
-		this.setCreativeTab(BaseMod.tabBaseMod);
-		this.setHardness(1F);
-		this.setStepSound(soundTypeStone);
-		this.setBlockName(ModInformation.ID + ".quisque.lapis.block");
-		this.setBlockTextureName(ModInformation.ID + ":quisqueLapis_block");
+		super("quisque.lapis.block", Material.rock, "quisqueLapis_block", soundTypeStone, 1F);
 	}
 }
