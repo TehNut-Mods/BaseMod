@@ -1,17 +1,22 @@
+#General use .gitignore for Minecraft modding.
+
+#Folders
 /.gradle/*
 /build/*
 /eclipse/*
+/run/*
 /out/*
 /asm/*
 /bin/*
-/run/*
-/libs/*
-Thumbs.db
+
+#File Extensions
 *.psd
 *.iml
 *.ipr
 *.iws
-*.psd
-*.psd
 *.classpath
 *.project
+
+#Specific files
+MCFPost.txt
+Thumbs.db
