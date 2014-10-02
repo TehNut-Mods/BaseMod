@@ -28,7 +28,6 @@ public class BlockBase extends Block {
 		super(material);
 
 		setBlockName(ModInformation.ID + "." + unlocName);
-		setBlockTextureName(ModInformation.ID + ":" + textureName);
 		setCreativeTab(BaseMod.tabBaseMod);
 		setStepSound(soundType);
 		setHardness(hardness);
