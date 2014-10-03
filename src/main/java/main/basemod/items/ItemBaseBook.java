@@ -16,12 +16,12 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class ItemBaseBook extends Item {
+public class ItemBaseBook extends ItemBase {
 
 	public IIcon[] icon = new IIcon[500];
 
 	public ItemBaseBook() {
-		this.setCreativeTab(BaseMod.tabBaseMod);
+		super("book");
 		this.setHasSubtypes(true);
 		this.setMaxStackSize(1);
 	}
@@ -42,7 +42,7 @@ public class ItemBaseBook extends Item {
 				name = "nothing";
 				break;
 		}
-		return getUnlocalizedName() + ".book." + name;
+		return getUnlocalizedName() + "." + name;
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -59,7 +59,7 @@ public class ItemBaseBook extends Item {
 	@SuppressWarnings({"rawtypes", "unchecked"})
 	@SideOnly(Side.CLIENT)
 	public void getSubItems(Item item, CreativeTabs par2CreativeTabs, List list) {
-		for (int i = 0; i <= 2; i++) {
+		for (int i = 0; i <= 1; i++) {
 			list.add(new ItemStack(this, 1, i));
 		}
 	}

@@ -45,8 +45,8 @@ public class BaseMod {
 
 		ConfigHandler.init(event.getSuggestedConfigurationFile());
 
-		ItemRegistry.registerAllItems();
-		BlockRegistry.registerAllBlocks();
+		ItemRegistry.registerItems();
+		BlockRegistry.registerBlocks();
 
 		OreDictHandler.registerOreDict();
 		FMLCommonHandler.instance().bus().register(new EventHandler());

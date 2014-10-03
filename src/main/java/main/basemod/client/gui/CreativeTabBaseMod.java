@@ -11,6 +11,11 @@ public class CreativeTabBaseMod extends CreativeTabs {
 
 	public CreativeTabBaseMod(String tabLabel) {
 		super(tabLabel);
+		setBackgroundImageName("basemod.png");
+	}
+
+	public boolean hasSearchBar() {
+		return true;
 	}
 
 	//The tab icon is what you return here.
