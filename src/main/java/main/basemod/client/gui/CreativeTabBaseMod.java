@@ -2,6 +2,7 @@ package main.basemod.client.gui;
 
 //Creates your creative tab.
 
+import main.basemod.ModInformation;
 import main.basemod.items.ItemRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -11,7 +12,7 @@ public class CreativeTabBaseMod extends CreativeTabs {
 
 	public CreativeTabBaseMod(String tabLabel) {
 		super(tabLabel);
-		setBackgroundImageName("basemod.png");
+		setBackgroundImageName(ModInformation.ID + ".png"); // Automatically has tab_ applied to it.
 	}
 
 	public boolean hasSearchBar() {
