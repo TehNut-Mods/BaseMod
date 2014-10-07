@@ -76,7 +76,7 @@ public class ItemBaseBook extends ItemBase {
 					player.swingItem();
 					player.setFire(3);
 				} else if (!player.isSneaking() && !player.worldObj.isRemote) {
-					player.addChatMessage(new ChatComponentTranslation("info.basemod.chat.sneak"));
+					player.addChatMessage(new ChatComponentTranslation("info." + ModInformation.ID + ".chat.sneak"));
 				}
 			}
 		}
@@ -87,7 +87,7 @@ public class ItemBaseBook extends ItemBase {
 	@Override
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
 		if (itemStack.getItemDamage() == 1) {
-			list.add(TextHelper.RED + TextHelper.localize("info.basemod.tooltip.fire"));
+			list.add(TextHelper.RED + TextHelper.localize("info." + ModInformation.ID + ".tooltip.fire"));
 		}
 	}
 }

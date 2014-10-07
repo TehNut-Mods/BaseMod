@@ -12,7 +12,7 @@ public class CreativeTabBaseMod extends CreativeTabs {
 
 	public CreativeTabBaseMod(String tabLabel) {
 		super(tabLabel);
-		setBackgroundImageName(ModInformation.ID + ".png"); // Automatically has tab_ applied to it.
+		setBackgroundImageName(ModInformation.ID + ".png"); // Automagically has tab_ applied to it.
 	}
 
 	public boolean hasSearchBar() {
