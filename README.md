@@ -9,7 +9,7 @@ My hope is that it is simple to understand and easy to use.
 ##How to use:
 
 1. Clone that repository using any Git client. (alternatively, download the zip)
-2. Setup your Gradle workspace. I suggest following [this](https://www.youtube.com/watch?v=8VEdtQLuLO0) tutorial by LexManos. I also suggest running "setupDecompWorkspace" instead of "setupDevWorkspace". Look in gradlew for what everything does.
+2. Setup your Gradle workspace. I suggest following [this](https://www.youtube.com/watch?v=8VEdtQLuLO0) tutorial by LexManos. I also suggest running `setupDecompWorkspace` instead of `setupDevWorkspace`. Look in gradlew for what everything does.
 3. Open it up in your IDE and refactor everything. 
 
        EG: BaseMod.java -> YourModName.java
@@ -43,11 +43,11 @@ I *do not* require any credit for this. I wrote it primarily for myself to use i
 
 * __Who the heck are you?__
   
-   I am the lead dev of [Redstone Armory](http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2111983-) and a head dev of [Flowstone Energy](https://github.com/FlowstoneTeam/FlowstoneEnergy). 
+   I am the lead dev of [Redstone Armory](http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2111983-). 
 
-   I also work on rewriting mods (Completely fresh code-base, custom textures, new names, etc) to balance them. BigReactors ([NuclearCubes](https://github.com/TehNut/NuclearCubes)) being a huge one. 
+   I am working on a BigReactors addon-overhaul called [NuclearCubes](https://github.com/TehNut/NuclearCubes).
 
-   Occasionally, I help out [Tombenpotter](https://github.com/Tombenpotter) with Electro-Magic Tools. (Mostly just localizations)
+   I am a maintainer of [Tombenpotter's](https://github.com/Tombenpotter) Electro-Magic Tools.
 
    I am also the newest TPPI dev.
    
