@@ -23,6 +23,7 @@ import main.basemod.proxies.CommonProxy;
 import main.basemod.util.EventHandler;
 import main.basemod.util.GenerationHandler;
 import main.basemod.util.OreDictHandler;
+import main.basemod.util.TextHelper;
 import net.minecraft.creativetab.CreativeTabs;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -41,7 +42,7 @@ public class BaseMod {
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		logger.info("Begin Pre-initialization");
+		logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.load.preInit"));
 
 		ConfigHandler.init(event.getSuggestedConfigurationFile());
 
@@ -57,7 +58,7 @@ public class BaseMod {
 
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
-		logger.info("Begin Initialization");
+		logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.load.init"));
 
 		ItemRecipeRegistry.registerItemRecipes();
 		BlockRecipeRegistry.registerBlockRecipes();
@@ -65,6 +66,6 @@ public class BaseMod {
 
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-		logger.info("Begin Post-initialization");
+		logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.load.postInit"));
 	}
 }

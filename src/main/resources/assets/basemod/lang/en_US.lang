@@ -48,3 +48,6 @@ gui.basemod.basebook.content.10=Well, she turned me into a newt. Bring her forwa
 
 #CONSOLE LOG
 info.basemod.console.config.refresh=Refreshing configuration file.
+info.basemod.console.load.preInit=Begin Pre-initialization
+info.basemod.console.load.init=Begin Initialization
+info.basemod.console.load.postInit=Begin Post-initialization
