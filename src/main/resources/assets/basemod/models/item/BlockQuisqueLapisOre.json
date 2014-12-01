@@ -1,5 +1,5 @@
 {
-    "parent": "basemod:block/BlockOreQuisqueLapis",
+    "parent": "basemod:block/BlockQuisqueLapisOre",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

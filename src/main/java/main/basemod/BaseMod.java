@@ -9,16 +9,23 @@ package main.basemod;
 import main.basemod.blocks.BlockRecipeRegistry;
 import main.basemod.blocks.BlockRegistry;
 import main.basemod.client.gui.CreativeTabBaseMod;
+import main.basemod.client.gui.GuiHandler;
 import main.basemod.items.ItemRecipeRegistry;
 import main.basemod.items.ItemRegistry;
 import main.basemod.proxies.CommonProxy;
+import main.basemod.util.EventHandler;
+import main.basemod.util.GenerationHandler;
+import main.basemod.util.OreDictHandler;
 import main.basemod.util.TextHelper;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -43,11 +50,11 @@ public class BaseMod {
 		ItemRegistry.registerItems();
 		BlockRegistry.registerBlocks();
 
-//		OreDictHandler.registerOreDict();
-//		FMLCommonHandler.instance().bus().register(new EventHandler());
-//		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
-//
-//		GameRegistry.registerWorldGenerator(new GenerationHandler(), 2);
+		OreDictHandler.registerOreDict();
+		FMLCommonHandler.instance().bus().register(new EventHandler());
+		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
+
+		GameRegistry.registerWorldGenerator(new GenerationHandler(), 2);
 	}
 
 	@Mod.EventHandler
@@ -58,6 +65,7 @@ public class BaseMod {
 		BlockRecipeRegistry.registerBlockRecipes();
 
 		BlockRegistry.registerInventoryRender();
+		ItemRegistry.registerInventoryRender();
 	}
 
 	@Mod.EventHandler

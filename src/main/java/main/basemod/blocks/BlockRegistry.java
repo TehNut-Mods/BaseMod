@@ -13,16 +13,16 @@ public class BlockRegistry {
 	public static Block quisqueLapisOre;
 
 	public static void registerBlocks() {
-		quisqueLapisOre = new BlockOreQuisqueLapis();
-		GameRegistry.registerBlock(quisqueLapisOre, "BlockOreQuisqueLapis");
+		quisqueLapisOre = new BlockQuisqueLapisOre();
+		GameRegistry.registerBlock(quisqueLapisOre, "BlockQuisqueLapisOre");
 
-		quisqueLapisBlock = new BlockLapisQuisque();
+		quisqueLapisBlock = new BlockQuisqueLapis();
 		GameRegistry.registerBlock(quisqueLapisBlock, "BlockQuisqueLapis");
 	}
 
 	public static void registerInventoryRender() {
 
-		InventoryRender.inventoryBlockRender(quisqueLapisOre, "BlockOreQuisqueLapis");
+		InventoryRender.inventoryBlockRender(quisqueLapisOre, "BlockQuisqueLapisOre");
 		InventoryRender.inventoryBlockRender(quisqueLapisBlock, "BlockQuisqueLapis");
 	}
 }

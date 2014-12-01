@@ -6,7 +6,9 @@ package main.basemod.items;
  * Keep that in mind if you like nicely organized creative tabs.
  */
 
+import main.basemod.util.InventoryRender;
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemRegistry {
 
@@ -15,10 +17,16 @@ public class ItemRegistry {
 	public static Item baseBook;
 
 	public static void registerItems() {
-//		quisqueLapis = new ItemLapisQuisque();
-//		GameRegistry.registerItem(quisqueLapis, "ItemLapisQuisque");
-//
-//		baseBook = new ItemBaseBook();
-//		GameRegistry.registerItem(baseBook, "ItemBaseBook");
+		quisqueLapis = new ItemQuisqueLapis();
+		GameRegistry.registerItem(quisqueLapis, "ItemQuisqueLapis");
+
+		baseBook = new ItemBaseBook();
+		GameRegistry.registerItem(baseBook, "ItemBaseBook");
+	}
+
+	public static void registerInventoryRender() {
+		InventoryRender.inventoryItemRender(baseBook, 0, "ItemBaseBook");
+		InventoryRender.inventoryItemRender(baseBook, 1, "ItemBaseBook");
+		InventoryRender.inventoryItemRender(quisqueLapis, "ItemQuisqueLapis");
 	}
 }

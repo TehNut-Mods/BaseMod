@@ -6,9 +6,9 @@ package main.basemod.blocks;
 
 import net.minecraft.block.material.Material;
 
-public class BlockLapisQuisque extends BlockBase {
+public class BlockQuisqueLapis extends BlockBase {
 
-	public BlockLapisQuisque() {
+	public BlockQuisqueLapis() {
 		super("quisque.lapis.block", Material.rock, soundTypeStone, 1F);
 	}
 }

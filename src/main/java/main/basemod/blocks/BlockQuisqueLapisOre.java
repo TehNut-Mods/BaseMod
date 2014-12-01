@@ -11,9 +11,9 @@ import net.minecraft.item.Item;
 
 import java.util.Random;
 
-public class BlockOreQuisqueLapis extends BlockBase {
+public class BlockQuisqueLapisOre extends BlockBase {
 
-	public BlockOreQuisqueLapis() {
+	public BlockQuisqueLapisOre() {
 		super("quisque.lapis.ore", Material.rock, soundTypeStone, 3F);
 	}
 
