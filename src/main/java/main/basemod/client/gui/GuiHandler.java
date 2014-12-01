@@ -1,10 +1,10 @@
 package main.basemod.client.gui;
 
-import cpw.mods.fml.common.network.IGuiHandler;
 import main.basemod.BaseMod;
 import main.basemod.client.gui.BaseBook.ItemGuiBaseBook;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.network.IGuiHandler;
 
 public class GuiHandler implements IGuiHandler {
 

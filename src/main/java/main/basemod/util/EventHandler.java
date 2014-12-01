@@ -5,11 +5,11 @@ package main.basemod.util;
  * Remember that there are two different registries for Events. This one will not work for everything.
  */
 
-import cpw.mods.fml.client.event.ConfigChangedEvent;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import main.basemod.BaseMod;
 import main.basemod.ConfigHandler;
 import main.basemod.ModInformation;
+import net.minecraftforge.fml.client.event.ConfigChangedEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class EventHandler {
 

@@ -4,10 +4,10 @@ package main.basemod.items;
  * General place to do all your item related recipe things'n'stuff.
  */
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import main.basemod.blocks.BlockRegistry;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
 public class ItemRecipeRegistry {

@@ -3,8 +3,8 @@ package main.basemod.client.gui;
 //Creates your creative tab.
 
 import main.basemod.ModInformation;
-import main.basemod.items.ItemRegistry;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
@@ -22,7 +22,7 @@ public class CreativeTabBaseMod extends CreativeTabs {
 	//The tab icon is what you return here.
 	@Override
 	public ItemStack getIconItemStack() {
-		return new ItemStack(ItemRegistry.quisqueLapis);
+		return new ItemStack(Items.command_block_minecart);
 	}
 
 	@Override
