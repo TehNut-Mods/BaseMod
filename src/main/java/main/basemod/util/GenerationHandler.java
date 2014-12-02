@@ -21,7 +21,7 @@ public class GenerationHandler implements IWorldGenerator {
 			case -1:
 				break;
 			case 0:
-				generateSurface(world, random);
+				generateSurface(world, random, chunkX * 16, chunkZ * 16);
 				break;
 			case 1:
 				break;
@@ -29,8 +29,17 @@ public class GenerationHandler implements IWorldGenerator {
 	}
 
 	//The actual generation method.
-	private void generateSurface(World world, Random rand) {
-		if (ConfigHandler.enableGeneration)
-			(new WorldGenMinable(BlockRegistry.quisqueLapisOre.getDefaultState(), 0)).generate(world, rand, BlockPos.ORIGIN);
-	}
+	private void generateSurface(World world, Random rand, int chunkX, int chunkZ) {
+        for (int k = 0; k < 16; k++)
+        {
+            int firstBlockXCoord = chunkX + rand.nextInt(16);
+            int firstBlockZCoord = chunkZ + rand.nextInt(16);
+            //Will be found between y = 0 and y = 20
+            int quisqueY = rand.nextInt(20);
+            BlockPos quisquePos = new BlockPos(firstBlockXCoord, quisqueY, firstBlockZCoord);
+            if (ConfigHandler.enableGeneration)
+                //The 10 as the second parameter sets the maximum vein size
+                (new WorldGenMinable(BlockRegistry.quisqueLapisOre.getDefaultState(), 10)).generate(world, rand, quisquePos);
+        }
+    }
 }
