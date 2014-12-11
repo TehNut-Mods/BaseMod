@@ -6,16 +6,15 @@ This is simply a base for people to build from and includes no content, aside fr
 
 My hope is that it is simple to understand and easy to use.
 
-##How to use:
+##Development Setup
 
-1. Clone that repository using any Git client. (alternatively, download the zip)
-2. Setup your Gradle workspace. I suggest following [this](https://www.youtube.com/watch?v=8VEdtQLuLO0) tutorial by LexManos. I also suggest running `setupDecompWorkspace` instead of `setupDevWorkspace`. Look in gradlew for what everything does.
-3. Open it up in your IDE and refactor everything. 
+1. Fork this project to your own Github repository and clone it to your desktop.
+2. Navigate to the directory you cloned to. Open a command window there and run `gradlew [setupDevWorkspace|setupDecompWorkspace] [eclipse|idea]`.
+3. This process will setup Forge and your workspace.
+4. Open the project in your IDE of choice.
+5. Set `../src/api/java` as a source directory.
 
-       EG: BaseMod.java -> YourModName.java
-      
-4. Write the content of your mod.
-5. Release to your loving fans and hope you didn't screw anything up.
+[Setup video](https://www.youtube.com/watch?v=8VEdtQLuLO0) by LexManos. For more information, refer to the [Forge Forums](http://www.minecraftforge.net/forum/index.php/topic,14048.0.html).
 
 I *do not* require any credit for this. I wrote it primarily for myself to use in my own mods and there's literally no reason for it to not be public.
 
@@ -43,13 +42,11 @@ I *do not* require any credit for this. I wrote it primarily for myself to use i
 
 * __Who the heck are you?__
   
-   I am the lead dev of [Redstone Armory](http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2111983-). 
-
-   I am working on a BigReactors addon-overhaul called [NuclearCubes](https://github.com/TehNut/NuclearCubes).
-
-   I am a maintainer of [Tombenpotter's](https://github.com/Tombenpotter) Electro-Magic Tools.
-
-   I am also the newest TPPI dev.
+   I am the developer of:
+   * Redstone Armory
+   * ResourcefulCrops
+   * Electro-Magic Tools
+   * Test Pack Please Ignore
    
 ##Additional Tips:
    
