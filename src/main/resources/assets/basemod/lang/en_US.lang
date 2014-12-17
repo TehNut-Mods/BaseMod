@@ -21,6 +21,7 @@ info.basemod.chat.sneak=Sneak to set yourself ablaze.
 
 #BASEBOOK
 #TITLES
+gui.basemod.basebook.title.default=[ERROR]
 gui.basemod.basebook.title.main=Base Book
 gui.basemod.basebook.title.1=Info 1
 gui.basemod.basebook.title.2=Info 2
@@ -34,6 +35,7 @@ gui.basemod.basebook.title.9=Info 9
 gui.basemod.basebook.title.10=Info 10
 
 #CONTENT
+gui.basemod.basebook.content.main=The book of filler text.
 gui.basemod.basebook.content.main=The book of filler text.
 gui.basemod.basebook.content.1=Leela, Bender, we're going grave robbing. Say what? Hey, guess what you're accessories to. Perhaps, but perhaps your civilization is merely the sewer of an even greater society above you! Why did you bring us here?
 gui.basemod.basebook.content.2=Have you ever tried just turning off the TV, sitting down with your children, and hitting them? We're also Santa Claus! Wow! A superpowers drug you can just rub onto your skin? You'd think it would be something you'd have to freebase. So I really am important? How I feel when I'm drunk is correct? Kif might! We're also Santa Claus!

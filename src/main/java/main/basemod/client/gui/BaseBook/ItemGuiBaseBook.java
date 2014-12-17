@@ -11,9 +11,6 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import static org.lwjgl.opengl.GL11.glColor4f;
 
 @SideOnly(Side.CLIENT)
@@ -24,10 +21,8 @@ public class ItemGuiBaseBook extends GuiScreen {
 	private static final int BOOK_BTN_NEXT = 0;
 	private static final int BOOK_BTN_PREV = 1;
 
-	public static final int WIDTH = 175;
-	public static final int HEIGHT = 228;
-
-	public static List<BaseBookPage> pages = new ArrayList<BaseBookPage>();
+	private static final int WIDTH = 175;
+	private static final int HEIGHT = 228;
 
 	private GuiButton next;
 	private GuiButton prev;
@@ -35,7 +30,7 @@ public class ItemGuiBaseBook extends GuiScreen {
 	private int pageIndex = 0;
 	private int bookTotalPages = 11;
 
-	public int bookXStart;
+	private int bookXStart;
 
 	public ItemGuiBaseBook() {
 
@@ -83,7 +78,7 @@ public class ItemGuiBaseBook extends GuiScreen {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public boolean doesGuiPauseGame() {
-		return true;
+		return false;
 	}
 
 	@Override
@@ -101,149 +96,49 @@ public class ItemGuiBaseBook extends GuiScreen {
 	public void drawForeground() {
 		switch (pageIndex) {
 			case 0:
-				drawMainScreen();
+				buildPage("gui." + ModInformation.ID + ".basebook.title.main", "gui." + ModInformation.ID + ".basebook.content.main", 1);
 				break;
 			case 1:
-				drawScreenTwo();
+				buildPage("gui." + ModInformation.ID + ".basebook.title.1", "gui." + ModInformation.ID + ".basebook.content.1", 2);
 				break;
 			case 2:
-				drawScreenThree();
+				buildPage("gui." + ModInformation.ID + ".basebook.title.2", "gui." + ModInformation.ID + ".basebook.content.2", 3);
 				break;
 			case 3:
-				drawScreenFour();
+				buildPage("gui." + ModInformation.ID + ".basebook.title.3", "gui." + ModInformation.ID + ".basebook.content.3", 4);
 				break;
 			case 4:
-				drawScreenFive();
+				buildPage("gui." + ModInformation.ID + ".basebook.title.4", "gui." + ModInformation.ID + ".basebook.content.4", 5);
 				break;
 			case 5:
-				drawScreenSix();
+				buildPage("gui." + ModInformation.ID + ".basebook.title.5", "gui." + ModInformation.ID + ".basebook.content.5", 6);
 				break;
 			case 6:
-				drawScreenSeven();
+				buildPage("gui." + ModInformation.ID + ".basebook.title.6", "gui." + ModInformation.ID + ".basebook.content.6", 7);
 				break;
 			case 7:
-				drawScreenEight();
+				buildPage("gui." + ModInformation.ID + ".basebook.title.7", "gui." + ModInformation.ID + ".basebook.content.7", 8);
 				break;
 			case 8:
-				drawScreenNine();
+				buildPage("gui." + ModInformation.ID + ".basebook.title.8", "gui." + ModInformation.ID + ".basebook.content.8", 9);
 				break;
 			case 9:
-				drawScreenTen();
+				buildPage("gui." + ModInformation.ID + ".basebook.title.9", "gui." + ModInformation.ID + ".basebook.content.9", 10);
 				break;
 			case 10:
-				drawScreenEleven();
+				buildPage("gui." + ModInformation.ID + ".basebook.title.10", "gui." + ModInformation.ID + ".basebook.content.10", 11);
+				break;
+			default:
+				buildPage("gui." + ModInformation.ID + ".basebook.title.default", "gui." + ModInformation.ID + ".basebook.content.default", 11);
 				break;
 		}
 	}
 
-	protected void drawMainScreen() {
-		fontRendererObj.drawString(TextHelper.localize("gui." + ModInformation.ID + ".basebook.title.main"), bookXStart + 60, 20, 0x000000);
-
-		boolean unicode = fontRendererObj.getUnicodeFlag();
+	private void buildPage(String unlocTitle, String unlocBody, int page) {
+		drawCenteredString(fontRendererObj, TextHelper.localize(unlocTitle), bookXStart + 85, 20, 0x666666);
 		fontRendererObj.setUnicodeFlag(false);
-		fontRendererObj.drawSplitString(TextHelper.localize("gui." + ModInformation.ID + ".basebook.content.main"), bookXStart + 30, 60, WIDTH - 40, 0x000000);
-		fontRendererObj.drawString((pageIndex + 1) + "/" + (bookTotalPages), bookXStart + 82, 215, 0x000000);
-		fontRendererObj.setUnicodeFlag(unicode);
-	}
-
-	private void drawScreenTwo() {
-		fontRendererObj.drawString(TextHelper.localize("gui." + ModInformation.ID + ".basebook.title.1"), bookXStart + 70, 20, 0x000000);
-
-		boolean unicode = fontRendererObj.getUnicodeFlag();
-		fontRendererObj.setUnicodeFlag(false);
-		fontRendererObj.drawSplitString(TextHelper.localize("gui." + ModInformation.ID + ".basebook.content.1"), bookXStart + 20, 60, WIDTH - 40, 0x000000);
-		fontRendererObj.drawString((pageIndex + 1) + "/" + (bookTotalPages), bookXStart + 82, 215, 0x000000);
-		fontRendererObj.setUnicodeFlag(unicode);
-	}
-
-	private void drawScreenThree() {
-		fontRendererObj.drawString(TextHelper.localize("gui." + ModInformation.ID + ".basebook.title.2"), bookXStart + 70, 20, 0x000000);
-
-		boolean unicode = fontRendererObj.getUnicodeFlag();
-		fontRendererObj.setUnicodeFlag(false);
-		fontRendererObj.drawSplitString(TextHelper.localize("gui." + ModInformation.ID + ".basebook.content.2"), bookXStart + 20, 60, WIDTH - 40, 0x000000);
-		fontRendererObj.drawString((pageIndex + 1) + "/" + (bookTotalPages), bookXStart + 82, 215, 0x000000);
-		fontRendererObj.setUnicodeFlag(unicode);
-	}
-
-	private void drawScreenFour() {
-		fontRendererObj.drawString(TextHelper.localize("gui." + ModInformation.ID + ".basebook.title.3"), bookXStart + 70, 20, 0x000000);
-
-		boolean unicode = fontRendererObj.getUnicodeFlag();
-		fontRendererObj.setUnicodeFlag(false);
-		fontRendererObj.drawSplitString(TextHelper.localize("gui." + ModInformation.ID + ".basebook.content.3"), bookXStart + 20, 60, WIDTH - 40, 0x000000);
-		fontRendererObj.drawString((pageIndex + 1) + "/" + (bookTotalPages), bookXStart + 82, 215, 0x000000);
-		fontRendererObj.setUnicodeFlag(unicode);
-	}
-
-	private void drawScreenFive() {
-		fontRendererObj.drawString(TextHelper.localize("gui." + ModInformation.ID + ".basebook.title.4"), bookXStart + 70, 20, 0x000000);
-
-		boolean unicode = fontRendererObj.getUnicodeFlag();
-		fontRendererObj.setUnicodeFlag(false);
-		fontRendererObj.drawSplitString(TextHelper.localize("gui." + ModInformation.ID + ".basebook.content.4"), bookXStart + 20, 60, WIDTH - 40, 0x000000);
-		fontRendererObj.drawString((pageIndex + 1) + "/" + (bookTotalPages), bookXStart + 82, 215, 0x000000);
-		fontRendererObj.setUnicodeFlag(unicode);
-	}
-
-	private void drawScreenSix() {
-		fontRendererObj.drawString(TextHelper.localize("gui." + ModInformation.ID + ".basebook.title.5"), bookXStart + 70, 20, 0x000000);
-
-		boolean unicode = fontRendererObj.getUnicodeFlag();
-		fontRendererObj.setUnicodeFlag(false);
-		fontRendererObj.drawSplitString(TextHelper.localize("gui." + ModInformation.ID + ".basebook.content.5"), bookXStart + 20, 60, WIDTH - 40, 0x000000);
-		fontRendererObj.drawString((pageIndex + 1) + "/" + (bookTotalPages), bookXStart + 82, 215, 0x000000);
-		fontRendererObj.setUnicodeFlag(unicode);
-	}
-
-	private void drawScreenSeven() {
-		fontRendererObj.drawString(TextHelper.localize("gui." + ModInformation.ID + ".basebook.title.6"), bookXStart + 70, 20, 0x000000);
-
-		boolean unicode = fontRendererObj.getUnicodeFlag();
-		fontRendererObj.setUnicodeFlag(false);
-		fontRendererObj.drawSplitString(TextHelper.localize("gui." + ModInformation.ID + ".basebook.content.6"), bookXStart + 20, 60, WIDTH - 40, 0x000000);
-		fontRendererObj.drawString((pageIndex + 1) + "/" + (bookTotalPages), bookXStart + 82, 215, 0x000000);
-		fontRendererObj.setUnicodeFlag(unicode);
-	}
-
-	private void drawScreenEight() {
-		fontRendererObj.drawString(TextHelper.localize("gui." + ModInformation.ID + ".basebook.title.7"), bookXStart + 70, 20, 0x000000);
-
-		boolean unicode = fontRendererObj.getUnicodeFlag();
-		fontRendererObj.setUnicodeFlag(false);
-		fontRendererObj.drawSplitString(TextHelper.localize("gui." + ModInformation.ID + ".basebook.content.7"), bookXStart + 20, 60, WIDTH - 40, 0x000000);
-		fontRendererObj.drawString((pageIndex + 1) + "/" + (bookTotalPages), bookXStart + 82, 215, 0x000000);
-		fontRendererObj.setUnicodeFlag(unicode);
-	}
-
-	private void drawScreenNine() {
-		fontRendererObj.drawString(TextHelper.localize("gui." + ModInformation.ID + ".basebook.title.8"), bookXStart + 70, 20, 0x000000);
-
-		boolean unicode = fontRendererObj.getUnicodeFlag();
-		fontRendererObj.setUnicodeFlag(false);
-		fontRendererObj.drawSplitString(TextHelper.localize("gui." + ModInformation.ID + ".basebook.content.8"), bookXStart + 20, 60, WIDTH - 40, 0x000000);
-		fontRendererObj.drawString((pageIndex + 1) + "/" + (bookTotalPages), bookXStart + 82, 215, 0x000000);
-		fontRendererObj.setUnicodeFlag(unicode);
-	}
-
-	private void drawScreenTen() {
-		fontRendererObj.drawString(TextHelper.localize("gui." + ModInformation.ID + ".basebook.title.9"), bookXStart + 70, 20, 0x000000);
-
-		boolean unicode = fontRendererObj.getUnicodeFlag();
-		fontRendererObj.setUnicodeFlag(false);
-		fontRendererObj.drawSplitString(TextHelper.localize("gui." + ModInformation.ID + ".basebook.content.9"), bookXStart + 20, 60, WIDTH - 40, 0x000000);
-		fontRendererObj.drawString((pageIndex + 1) + "/" + (bookTotalPages), bookXStart + 82, 215, 0x000000);
-		fontRendererObj.setUnicodeFlag(unicode);
-	}
-
-	private void drawScreenEleven() {
-		fontRendererObj.drawString(TextHelper.localize("gui." + ModInformation.ID + ".basebook.title.10"), bookXStart + 70, 20, 0x000000);
-
-		boolean unicode = fontRendererObj.getUnicodeFlag();
-		fontRendererObj.setUnicodeFlag(false);
-		fontRendererObj.drawSplitString(TextHelper.localize("gui." + ModInformation.ID + ".basebook.content.10"), bookXStart + 20, 60, WIDTH - 40, 0x000000);
-		fontRendererObj.drawString((pageIndex + 1) + "/" + (bookTotalPages), bookXStart + 82, 215, 0x000000);
-		fontRendererObj.setUnicodeFlag(unicode);
+		fontRendererObj.drawSplitString(TextHelper.localize(unlocBody), bookXStart + 20, 60, WIDTH - 40, 0x666666);
+		drawCenteredString(fontRendererObj, page + " / " + bookTotalPages, bookXStart + 85, 215, 0x666666);
 	}
 
 	public class GuiButtonPageChange extends GuiButton {
