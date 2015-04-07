@@ -17,12 +17,12 @@ public class BlockRecipeRegistry {
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(BlockRegistry.quisqueLapisBlock), new Object[]{"XXX", "XXX", "XXX", 'X', "dustQuisqueLapis"}));
 	}
 
-	private static void registerShaplessRecipes() {
+	private static void registerShapelessRecipes() {
 
 	}
 
 	public static void registerBlockRecipes() {
 		registerShapedRecipes();
-		registerShaplessRecipes();
+		registerShapelessRecipes();
 	}
 }
