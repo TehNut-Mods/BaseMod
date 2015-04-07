@@ -18,12 +18,12 @@ public class ItemRecipeRegistry {
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.blaze_rod), "  X", " X ", "X  ", 'X', "powderBlaze"));
 	}
 
-	private static void registerShaplessRecipes() {
+	private static void registerShapelessRecipes() {
 		GameRegistry.addShapelessRecipe(new ItemStack(BlockRegistry.quisqueLapisBlock), new ItemStack(ItemRegistry.quisqueLapis, 9));
 	}
 
 	public static void registerItemRecipes() {
 		registerShapedRecipes();
-		registerShaplessRecipes();
+		registerShapelessRecipes();
 	}
 }
