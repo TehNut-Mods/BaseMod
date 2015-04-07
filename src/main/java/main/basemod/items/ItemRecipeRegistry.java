@@ -14,8 +14,8 @@ public class ItemRecipeRegistry {
 
 	// Self explanatory. Continue these how you wish. EG: registerSmeltingRecipes
 	private static void registerShapedRecipes() {
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.blaze_rod), new Object[]{"X  ", " X ", "  X", 'X', "powderBlaze"}));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.blaze_rod), new Object[]{"  X", " X ", "X  ", 'X', "powderBlaze"}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.blaze_rod), "X  ", " X ", "  X", 'X', "powderBlaze"));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.blaze_rod), "  X", " X ", "X  ", 'X', "powderBlaze"));
 	}
 
 	private static void registerShaplessRecipes() {
