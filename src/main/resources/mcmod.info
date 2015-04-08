@@ -1,14 +1,14 @@
 [
 {
-  "modid": "basemod",
-  "name": "Base Mod",
+  "modid": "skeleton",
+  "name": "Mod Skeleton",
   "description": "Base mod to build from.",
-  "version": "0.0.0",
-  "mcversion": "1.7.10",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ModDeveloper"],
-  "credits": "TehNut for creating this base for me.",
+  "authorList": [ "ModDeveloper" ],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
