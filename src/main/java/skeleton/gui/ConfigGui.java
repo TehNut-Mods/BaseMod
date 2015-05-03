@@ -15,17 +15,17 @@ import static skeleton.ConfigHandler.*;
 
 public class ConfigGui extends GuiConfig {
 
-	public ConfigGui(GuiScreen parentScreen) {
-		super(parentScreen, getConfigElements(parentScreen), ModInformation.ID, false, false, "Skeleton Mod Configuration");
-	}
+    public ConfigGui(GuiScreen parentScreen) {
+        super(parentScreen, getConfigElements(parentScreen), ModInformation.ID, false, false, "Skeleton Mod Configuration");
+    }
 
-	@SuppressWarnings("rawtypes")
-	private static List<IConfigElement> getConfigElements(GuiScreen parent) {
-		List<IConfigElement> list = new ArrayList<IConfigElement>();
+    @SuppressWarnings("rawtypes")
+    private static List<IConfigElement> getConfigElements(GuiScreen parent) {
+        List<IConfigElement> list = new ArrayList<IConfigElement>();
 
-		// adds sections declared in ConfigHandler. toLowerCase() is used because the configuration class automatically does this, so must we.
-		list.add(new ConfigElement<ConfigCategory>(config.getCategory(Configuration.CATEGORY_GENERAL.toLowerCase())));
+        // adds sections declared in ConfigHandler. toLowerCase() is used because the configuration class automatically does this, so must we.
+        list.add(new ConfigElement<ConfigCategory>(config.getCategory(Configuration.CATEGORY_GENERAL.toLowerCase())));
 
-		return list;
-	}
+        return list;
+    }
 }

@@ -19,34 +19,34 @@ import net.minecraftforge.common.MinecraftForge;
 @Mod(modid = ModInformation.ID, name = ModInformation.NAME, version = ModInformation.VERSION, dependencies = ModInformation.DEPEND, guiFactory = ModInformation.GUIFACTORY)
 public class Skeleton {
 
-	@SidedProxy(clientSide = ModInformation.CLIENTPROXY, serverSide = ModInformation.COMMONPROXY)
-	public static CommonProxy proxy;
+    @SidedProxy(clientSide = ModInformation.CLIENTPROXY, serverSide = ModInformation.COMMONPROXY)
+    public static CommonProxy proxy;
 
-	public static CreativeTabs tabBaseMod = new CreativeTabBaseMod(ModInformation.ID + ".creativeTab");
+    public static CreativeTabs tabBaseMod = new CreativeTabBaseMod(ModInformation.ID + ".creativeTab");
 
-	@Mod.Instance
-	public static Skeleton instance;
+    @Mod.Instance
+    public static Skeleton instance;
 
-	@Mod.EventHandler
-	public void preInit(FMLPreInitializationEvent event) {
+    @Mod.EventHandler
+    public void preInit(FMLPreInitializationEvent event) {
 
-		ConfigHandler.init(event.getSuggestedConfigurationFile());
+        ConfigHandler.init(event.getSuggestedConfigurationFile());
 
-		ItemRegistry.registerItems();
-		BlockRegistry.registerBlocks();
+        ItemRegistry.registerItems();
+        BlockRegistry.registerBlocks();
 
-		FMLCommonHandler.instance().bus().register(new EventHandler());
+        FMLCommonHandler.instance().bus().register(new EventHandler());
         MinecraftForge.EVENT_BUS.register(new EventHandler());
-	}
+    }
 
-	@Mod.EventHandler
-	public void init(FMLInitializationEvent event) {
-		ItemRecipeRegistry.registerItemRecipes();
-		BlockRecipeRegistry.registerBlockRecipes();
-	}
+    @Mod.EventHandler
+    public void init(FMLInitializationEvent event) {
+        ItemRecipeRegistry.registerItemRecipes();
+        BlockRecipeRegistry.registerBlockRecipes();
+    }
 
-	@Mod.EventHandler
-	public void postInit(FMLPostInitializationEvent event) {
+    @Mod.EventHandler
+    public void postInit(FMLPostInitializationEvent event) {
 
-	}
+    }
 }
