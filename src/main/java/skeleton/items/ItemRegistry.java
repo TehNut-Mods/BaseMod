@@ -2,7 +2,7 @@ package skeleton.items;
 
 public class ItemRegistry {
 
-	public static void registerItems() {
+    public static void registerItems() {
 
-	}
+    }
 }

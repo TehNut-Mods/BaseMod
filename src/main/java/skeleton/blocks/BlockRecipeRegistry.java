@@ -2,16 +2,16 @@ package skeleton.blocks;
 
 public class BlockRecipeRegistry {
 
-	private static void registerShapedRecipes() {
+    private static void registerShapedRecipes() {
 
-	}
+    }
 
-	private static void registerShaplessRecipes() {
+    private static void registerShaplessRecipes() {
 
-	}
+    }
 
-	public static void registerBlockRecipes() {
-		registerShapedRecipes();
-		registerShaplessRecipes();
-	}
+    public static void registerBlockRecipes() {
+        registerShapedRecipes();
+        registerShaplessRecipes();
+    }
 }

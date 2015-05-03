@@ -2,7 +2,7 @@ package skeleton.blocks;
 
 public class BlockRegistry {
 
-	public static void registerBlocks() {
+    public static void registerBlocks() {
 
-	}
+    }
 }

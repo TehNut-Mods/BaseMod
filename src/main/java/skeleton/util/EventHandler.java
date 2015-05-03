@@ -8,11 +8,11 @@ import skeleton.ModInformation;
 
 public class EventHandler {
 
-	@SubscribeEvent
-	public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent eventArgs) {
-		if (eventArgs.modID.equals(ModInformation.ID)) {
-			ConfigHandler.syncConfig();
-			LogHelper.info("Refreshing configuration file.");
-		}
-	}
+    @SubscribeEvent
+    public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent eventArgs) {
+        if (eventArgs.modID.equals(ModInformation.ID)) {
+            ConfigHandler.syncConfig();
+            LogHelper.info("Refreshing configuration file.");
+        }
+    }
 }
