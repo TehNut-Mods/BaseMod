@@ -32,44 +32,44 @@ import org.apache.logging.log4j.Logger;
 @Mod(modid = ModInformation.ID, name = ModInformation.NAME, version = ModInformation.VERSION, dependencies = ModInformation.DEPEND, guiFactory = ModInformation.GUIFACTORY)
 public class BaseMod {
 
-	@SidedProxy(clientSide = ModInformation.CLIENTPROXY, serverSide = ModInformation.COMMONPROXY)
-	public static CommonProxy proxy;
+    @SidedProxy(clientSide = ModInformation.CLIENTPROXY, serverSide = ModInformation.COMMONPROXY)
+    public static CommonProxy proxy;
 
-	public static CreativeTabs tabBaseMod = new CreativeTabBaseMod(ModInformation.ID + ".creativeTab");
-	public static Logger logger = LogManager.getLogger(ModInformation.NAME);
+    public static CreativeTabs tabBaseMod = new CreativeTabBaseMod(ModInformation.ID + ".creativeTab");
+    public static Logger logger = LogManager.getLogger(ModInformation.NAME);
 
-	@Mod.Instance
-	public static BaseMod instance;
+    @Mod.Instance
+    public static BaseMod instance;
 
-	@Mod.EventHandler
-	public void preInit(FMLPreInitializationEvent event) {
-		logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.load.preInit"));
+    @Mod.EventHandler
+    public void preInit(FMLPreInitializationEvent event) {
+        logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.load.preInit"));
 
-		ConfigHandler.init(event.getSuggestedConfigurationFile());
+        ConfigHandler.init(event.getSuggestedConfigurationFile());
 
-		ItemRegistry.registerItems();
-		BlockRegistry.registerBlocks();
+        ItemRegistry.registerItems();
+        BlockRegistry.registerBlocks();
 
-		OreDictHandler.registerOreDict();
-		FMLCommonHandler.instance().bus().register(new EventHandler());
-		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
+        OreDictHandler.registerOreDict();
+        FMLCommonHandler.instance().bus().register(new EventHandler());
+        NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
 
-		GameRegistry.registerWorldGenerator(new GenerationHandler(), 2);
-	}
+        GameRegistry.registerWorldGenerator(new GenerationHandler(), 2);
+    }
 
-	@Mod.EventHandler
-	public void init(FMLInitializationEvent event) {
-		logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.load.init"));
+    @Mod.EventHandler
+    public void init(FMLInitializationEvent event) {
+        logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.load.init"));
 
-		ItemRecipeRegistry.registerItemRecipes();
-		BlockRecipeRegistry.registerBlockRecipes();
+        ItemRecipeRegistry.registerItemRecipes();
+        BlockRecipeRegistry.registerBlockRecipes();
 
-		BlockRegistry.registerInventoryRender();
-		ItemRegistry.registerInventoryRender();
-	}
+        BlockRegistry.registerInventoryRender();
+        ItemRegistry.registerInventoryRender();
+    }
 
-	@Mod.EventHandler
-	public void postInit(FMLPostInitializationEvent event) {
-		logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.load.postInit"));
-	}
+    @Mod.EventHandler
+    public void postInit(FMLPostInitializationEvent event) {
+        logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.load.postInit"));
+    }
 }

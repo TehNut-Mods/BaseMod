@@ -12,21 +12,21 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemRegistry {
 
-	// Items
-	public static Item quisqueLapis;
-	public static Item baseBook;
+    // Items
+    public static Item quisqueLapis;
+    public static Item baseBook;
 
-	public static void registerItems() {
-		quisqueLapis = new ItemQuisqueLapis();
-		GameRegistry.registerItem(quisqueLapis, "ItemQuisqueLapis");
+    public static void registerItems() {
+        quisqueLapis = new ItemQuisqueLapis();
+        GameRegistry.registerItem(quisqueLapis, "ItemQuisqueLapis");
 
-		baseBook = new ItemBaseBook();
-		GameRegistry.registerItem(baseBook, "ItemBaseBook");
-	}
+        baseBook = new ItemBaseBook();
+        GameRegistry.registerItem(baseBook, "ItemBaseBook");
+    }
 
-	public static void registerInventoryRender() {
-		InventoryRender.inventoryItemRender(baseBook, 0, "ItemBaseBook");
-		InventoryRender.inventoryItemRender(baseBook, 1, "ItemBaseBook");
-		InventoryRender.inventoryItemRender(quisqueLapis, "ItemQuisqueLapis");
-	}
+    public static void registerInventoryRender() {
+        InventoryRender.inventoryItemRender(baseBook, 0, "ItemBaseBook");
+        InventoryRender.inventoryItemRender(baseBook, 1, "ItemBaseBook");
+        InventoryRender.inventoryItemRender(quisqueLapis, "ItemQuisqueLapis");
+    }
 }

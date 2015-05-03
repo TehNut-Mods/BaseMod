@@ -11,18 +11,18 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 
 public class BlockRecipeRegistry {
 
-	//Self explanatory. Continue these how you wish. EG: registerPulverizerRecipes
-	private static void registerShapedRecipes() {
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.gold_ore), "XXX", "X X", "XXX", 'X', "ingotGold"));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(BlockRegistry.quisqueLapisBlock), "XXX", "XXX", "XXX", 'X', "dustQuisqueLapis"));
-	}
+    //Self explanatory. Continue these how you wish. EG: registerPulverizerRecipes
+    private static void registerShapedRecipes() {
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.gold_ore), "XXX", "X X", "XXX", 'X', "ingotGold"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(BlockRegistry.quisqueLapisBlock), "XXX", "XXX", "XXX", 'X', "dustQuisqueLapis"));
+    }
 
-	private static void registerShapelessRecipes() {
+    private static void registerShapelessRecipes() {
 
-	}
+    }
 
-	public static void registerBlockRecipes() {
-		registerShapedRecipes();
-		registerShapelessRecipes();
-	}
+    public static void registerBlockRecipes() {
+        registerShapedRecipes();
+        registerShapelessRecipes();
+    }
 }

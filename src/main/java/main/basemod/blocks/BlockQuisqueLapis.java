@@ -8,7 +8,7 @@ import net.minecraft.block.material.Material;
 
 public class BlockQuisqueLapis extends BlockBase {
 
-	public BlockQuisqueLapis() {
-		super("quisque.lapis.block", Material.rock, soundTypeStone, 1F);
-	}
+    public BlockQuisqueLapis() {
+        super("quisque.lapis.block", Material.rock, soundTypeStone, 1F);
+    }
 }
