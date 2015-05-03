@@ -13,11 +13,11 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class EventHandler {
 
-	@SubscribeEvent
-	public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent eventArgs) {
-		if (eventArgs.modID.equals(ModInformation.ID)) {
-			ConfigHandler.syncConfig();
-			BaseMod.logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.config.refresh"));
-		}
-	}
+    @SubscribeEvent
+    public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent eventArgs) {
+        if (eventArgs.modID.equals(ModInformation.ID)) {
+            ConfigHandler.syncConfig();
+            BaseMod.logger.info(TextHelper.localize("info." + ModInformation.ID + ".console.config.refresh"));
+        }
+    }
 }

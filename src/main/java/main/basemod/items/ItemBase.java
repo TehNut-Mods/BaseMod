@@ -11,10 +11,10 @@ import net.minecraft.item.Item;
 
 public class ItemBase extends Item {
 
-	public ItemBase(String unlocName) {
-		super();
+    public ItemBase(String unlocName) {
+        super();
 
-		setUnlocalizedName(ModInformation.ID + "." + unlocName);
-		setCreativeTab(BaseMod.tabBaseMod);
-	}
+        setUnlocalizedName(ModInformation.ID + "." + unlocName);
+        setCreativeTab(BaseMod.tabBaseMod);
+    }
 }

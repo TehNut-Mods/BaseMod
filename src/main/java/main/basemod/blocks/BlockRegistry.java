@@ -8,21 +8,21 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class BlockRegistry {
 
-	// Blocks
-	public static Block quisqueLapisBlock;
-	public static Block quisqueLapisOre;
+    // Blocks
+    public static Block quisqueLapisBlock;
+    public static Block quisqueLapisOre;
 
-	public static void registerBlocks() {
-		quisqueLapisOre = new BlockQuisqueLapisOre();
-		GameRegistry.registerBlock(quisqueLapisOre, "BlockQuisqueLapisOre");
+    public static void registerBlocks() {
+        quisqueLapisOre = new BlockQuisqueLapisOre();
+        GameRegistry.registerBlock(quisqueLapisOre, "BlockQuisqueLapisOre");
 
-		quisqueLapisBlock = new BlockQuisqueLapis();
-		GameRegistry.registerBlock(quisqueLapisBlock, "BlockQuisqueLapis");
-	}
+        quisqueLapisBlock = new BlockQuisqueLapis();
+        GameRegistry.registerBlock(quisqueLapisBlock, "BlockQuisqueLapis");
+    }
 
-	public static void registerInventoryRender() {
+    public static void registerInventoryRender() {
 
-		InventoryRender.inventoryBlockRender(quisqueLapisOre, "BlockQuisqueLapisOre");
-		InventoryRender.inventoryBlockRender(quisqueLapisBlock, "BlockQuisqueLapis");
-	}
+        InventoryRender.inventoryBlockRender(quisqueLapisOre, "BlockQuisqueLapisOre");
+        InventoryRender.inventoryBlockRender(quisqueLapisBlock, "BlockQuisqueLapis");
+    }
 }
