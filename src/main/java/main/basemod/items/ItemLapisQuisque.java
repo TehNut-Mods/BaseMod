@@ -6,7 +6,7 @@ package main.basemod.items;
 
 public class ItemLapisQuisque extends ItemBase {
 
-	public ItemLapisQuisque() {
-		super("quisque.lapis", "quisqueLapis");
-	}
+    public ItemLapisQuisque() {
+        super("quisque.lapis", "quisqueLapis");
+    }
 }
